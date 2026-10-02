@@ -6,10 +6,10 @@ export const SITE_ORIGIN = "https://b1gplayer.uk";
 export const SITE_NAME = "B1G Player";
 
 export const SITE_TITLE =
-  "B1G Player – Official IPTV App & B1G IPTV Subscription";
+  "B1G Player: B1G IPTV App & B1G APK + B1G Player Subscription";
 
 export const SITE_DESCRIPTION =
-  "B1G Player is the official app for B1G IPTV subscriptions. Access live TV, sports, movies and series on supported Firestick and Android devices.";
+  "Install B1G Player on a compatible Firestick, Fire TV or Android device, choose a B1G IPTV Subscription from £10 and receive the private login details and setup guidance needed to get started.";
 
 /** Canonical route paths (always trailing slash except homepage `/`). */
 export const ROUTES = {

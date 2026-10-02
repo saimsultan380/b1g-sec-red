@@ -12,46 +12,42 @@ import {
 } from "lucide-react";
 
 const liveTvCategories = [
-  "UK entertainment",
+  "Entertainment",
   "News",
   "Lifestyle",
-  "Children’s programming",
-  "Documentaries",
-  "International television",
-  "Regional channels",
+  "Documentary",
+  "Family",
+  "International categories",
 ];
 
 const liveSportsCategories = [
   "Football",
   "Cricket",
   "Rugby",
-  "Formula 1 and motorsport",
+  "Motorsport",
   "Boxing",
-  "UFC and combat sports",
-  "Other international sporting events",
+  "Other events",
 ];
 
 const moviesCategories = [
   "Action",
-  "Drama",
   "Comedy",
+  "Drama",
   "Thriller",
   "Documentary",
   "Family",
-  "British cinema",
-  "European cinema",
-  "Asian cinema",
   "International films",
 ];
 
 const newsDocCategories = [
   "Current affairs",
+  "Factual",
   "History",
   "Nature",
   "Science",
   "Technology",
-  "Travel",
   "Culture",
+  "Travel",
 ];
 
 const Tick = () => (
@@ -73,22 +69,16 @@ export function LiveCategories() {
       className="w-full py-12 sm:py-20 bg-white border-t border-slate-200"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full">
-        {/* ── Section Heading & Intro ── */}
         <FadeIn className="w-full max-w-4xl mb-10">
           <h2 className="text-h2 font-bold tracking-tight text-[#12141F]">
             Live Television, Sports,{" "}
-            <span className="text-brand-gradient font-bold">Movies and Series</span>
+            <span className="text-brand-gradient font-bold">Films and TV Series</span>
           </h2>
-          <p className="mt-4 text-sm sm:text-base text-[#4A4A4A] leading-relaxed">
-            B1G IPTV brings several entertainment categories together through the official app or another supported application.
-          </p>
         </FadeIn>
 
-        {/* ── Grid Layout: 3 Columns on Desktop, items-stretch ── */}
         <FadeIn className="w-full">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch w-full">
             
-            {/* Card 1: Live Television */}
             <div className="rounded-[12px] border border-slate-200 bg-white p-6 flex flex-col justify-between h-full">
               <div>
                 <div className="flex items-center gap-2.5 mb-3">
@@ -96,11 +86,11 @@ export function LiveCategories() {
                     <Tv className="h-4 w-4 stroke-[2]" />
                   </div>
                   <h3 className="text-base sm:text-lg font-bold text-[#12141F] leading-none">
-                    Live Television
+                    Live television
                   </h3>
                 </div>
                 <p className="text-xs sm:text-sm text-slate-500 mb-4 font-semibold">
-                  Browse available channels across categories such as:
+                  Browse available entertainment, news, lifestyle, documentary, family and international categories through one organised B1G Player interface without switching between several separate players.
                 </p>
                 <ul className="space-y-2.5">
                   {liveTvCategories.map((item, idx) => (
@@ -113,14 +103,8 @@ export function LiveCategories() {
                   ))}
                 </ul>
               </div>
-              <div className="border-t border-slate-100 pt-4 mt-6">
-                <p className="text-xs text-[#4A4A4A] leading-relaxed">
-                  The categories displayed depend on the active package and current channel list.
-                </p>
-              </div>
             </div>
 
-            {/* Card 2: Live Sports */}
             <div className="rounded-[12px] border border-slate-200 bg-white p-6 flex flex-col justify-between h-full">
               <div>
                 <div className="flex items-center gap-2.5 mb-3">
@@ -128,11 +112,11 @@ export function LiveCategories() {
                     <Trophy className="h-4 w-4 stroke-[2]" />
                   </div>
                   <h3 className="text-base sm:text-lg font-bold text-[#12141F] leading-none">
-                    Live Sports
+                    Sports categories
                   </h3>
                 </div>
                 <p className="text-xs sm:text-sm text-slate-500 mb-4 font-semibold">
-                  Available sports coverage may include channels showing:
+                  Available sports sections may include football, cricket, rugby, motorsport, boxing and other events. Competition schedules and source availability can change, so customers should request a current check when a specific event is important.
                 </p>
                 <ul className="space-y-2.5">
                   {liveSportsCategories.map((item, idx) => (
@@ -145,14 +129,8 @@ export function LiveCategories() {
                   ))}
                 </ul>
               </div>
-              <div className="border-t border-slate-100 pt-4 mt-6">
-                <p className="text-xs text-[#4A4A4A] leading-relaxed">
-                  Schedules, broadcasting rights and event availability can change. Check the current package or contact support when access to a particular event is important.
-                </p>
-              </div>
             </div>
 
-            {/* Card 3: Movies */}
             <div className="rounded-[12px] border border-slate-200 bg-white p-6 flex flex-col justify-between h-full">
               <div>
                 <div className="flex items-center gap-2.5 mb-3">
@@ -160,11 +138,11 @@ export function LiveCategories() {
                     <Film className="h-4 w-4 stroke-[2]" />
                   </div>
                   <h3 className="text-base sm:text-lg font-bold text-[#12141F] leading-none">
-                    Movies
+                    Films
                   </h3>
                 </div>
                 <p className="text-xs sm:text-sm text-slate-500 mb-4 font-semibold">
-                  The available movie library may include:
+                  Explore available action, comedy, drama, thriller, documentary, family and international films organised by category.
                 </p>
                 <ul className="space-y-2.5">
                   {moviesCategories.map((item, idx) => (
@@ -177,14 +155,8 @@ export function LiveCategories() {
                   ))}
                 </ul>
               </div>
-              <div className="border-t border-slate-100 pt-4 mt-6">
-                <p className="text-xs text-[#4A4A4A] leading-relaxed">
-                  Movies are arranged into categories to make browsing easier.
-                </p>
-              </div>
             </div>
 
-            {/* Card 4: News and Documentaries (Aligned FIRST in row 2 on desktop) */}
             <div className="rounded-[12px] border border-slate-200 bg-white p-6 flex flex-col justify-between h-full">
               <div>
                 <div className="flex items-center gap-2.5 mb-3">
@@ -192,11 +164,11 @@ export function LiveCategories() {
                     <Newspaper className="h-4 w-4 stroke-[2]" />
                   </div>
                   <h3 className="text-base sm:text-lg font-bold text-[#12141F] leading-none">
-                    News and Documentaries
+                    News and documentaries
                   </h3>
                 </div>
                 <p className="text-xs sm:text-sm text-slate-500 mb-4 font-semibold">
-                  Browse news and documentary content covering subjects such as:
+                  Access available current-affairs, factual, history, nature, science, technology, culture and travel categories.
                 </p>
                 <ul className="space-y-2.5">
                   {newsDocCategories.map((item, idx) => (
@@ -209,14 +181,8 @@ export function LiveCategories() {
                   ))}
                 </ul>
               </div>
-              <div className="border-t border-slate-100 pt-4 mt-6">
-                <p className="text-xs text-[#4A4A4A] leading-relaxed">
-                  Includes international and local current affairs, lifestyle, history, nature, science and travel networks.
-                </p>
-              </div>
             </div>
 
-            {/* Card 5: Television Series (Middle on desktop, content vertically centered to match left card height) */}
             <div className="rounded-[12px] border border-slate-200 bg-white p-6 flex flex-col justify-between h-full">
               <div className="lg:flex-1 lg:flex lg:flex-col lg:justify-between">
                 <div>
@@ -225,25 +191,18 @@ export function LiveCategories() {
                       <MonitorPlay className="h-4 w-4 stroke-[2]" />
                     </div>
                     <h3 className="text-base sm:text-lg font-bold text-[#12141F] leading-none">
-                      Television Series
+                      TV series
                     </h3>
                   </div>
                 </div>
-                {/* Vertically centered body content on desktop, compact on mobile */}
                 <div className="lg:flex-1 lg:flex lg:items-center py-2 lg:py-8">
                   <p className="text-xs sm:text-sm text-slate-800 font-semibold leading-relaxed">
-                    Available series are organised into clear sections.
+                    Browse available series, seasons and recently added programmes. Exact titles and the number of complete seasons vary over time.
                   </p>
                 </div>
               </div>
-              <div className="border-t border-slate-100 pt-4 mt-4 lg:mt-6">
-                <p className="text-xs text-[#4A4A4A] leading-relaxed">
-                  The library may contain complete seasons as well as recently added programmes, depending on current availability.
-                </p>
-              </div>
             </div>
 
-            {/* Card 6: Family Entertainment (Right on desktop, content vertically centered to match left card height) */}
             <div className="rounded-[12px] border border-slate-200 bg-white p-6 flex flex-col justify-between h-full">
               <div className="lg:flex-1 lg:flex lg:flex-col lg:justify-between">
                 <div>
@@ -252,21 +211,15 @@ export function LiveCategories() {
                       <Users className="h-4 w-4 stroke-[2]" />
                     </div>
                     <h3 className="text-base sm:text-lg font-bold text-[#12141F] leading-none">
-                      Family Entertainment
+                      Family viewing note
                     </h3>
                   </div>
                 </div>
-                {/* Vertically centered body content on desktop, compact on mobile */}
                 <div className="lg:flex-1 lg:flex lg:items-center py-2 lg:py-8">
                   <p className="text-xs sm:text-sm text-slate-800 font-semibold leading-relaxed">
-                    Family and children’s categories may be available within the subscription.
+                    Parents and guardians should check programme suitability and use parental controls where the chosen player provides them.
                   </p>
                 </div>
-              </div>
-              <div className="border-t border-slate-100 pt-4 mt-4 lg:mt-6">
-                <p className="text-xs text-[#4A4A4A] leading-relaxed">
-                  Parents and guardians should check programme suitability and use any parental-control options provided by the selected application.
-                </p>
               </div>
             </div>
 
