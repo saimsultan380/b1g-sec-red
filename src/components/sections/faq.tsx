@@ -12,78 +12,43 @@ interface FAQItem {
 const faqList: FAQItem[] = [
   {
     question: "What is B1G Player?",
-    answer:
-      "B1G Player is the viewing application used with an active B1G IPTV account on compatible devices. It organises available live television, films, TV series and programme information into an accessible interface.",
+    answer: "B1G Player is the official IPTV application used with an active B1G IPTV subscription on compatible Android and Fire TV devices.",
   },
   {
-    question: "Is B1G Player the same as B1G IPTV?",
-    answer:
-      "No. B1G Player is the viewing application. B1G IPTV is the active subscription account used with the application.",
+    question: "Does the app come with the subscription?",
+    answer: "Yes. Access to the official player is included with each active subscription.",
   },
   {
-    question: "Is there a B1G free trial?",
-    answer:
-      "A B1G free trial may be available for new customers who want to test compatibility before choosing a longer plan. Contact support to confirm the current trial duration, conditions, and availability.",
+    question: "What does a B1G IPTV subscription include?",
+    answer: "It may include more than 35,000 live channels, 50,000+ movies, 10,000+ television series, sports, EPG, Catch-Up and customer support.",
   },
   {
-    question: "What is the B1G Player subscription?",
-    answer:
-      "A B1G Player subscription generally refers to the B1G IPTV subscription/account used to access the available service through B1G Player or another compatible player. The app itself and the subscription should be treated as separate components.",
+    question: "Which devices support the official app?",
+    answer: "The app supports compatible Android Smart TVs, Android boxes, Firestick, Fire TV, Android phones and tablets.",
   },
   {
-    question: "Can I download a B1G APK?",
-    answer:
-      "A B1G APK is an Android application package. If an APK installation is required for your compatible Android device, use the installation method and file supplied or recommended by the service and make sure it matches your device.",
+    question: "Can I use the subscription on Samsung or LG?",
+    answer: "Yes. Install a compatible third-party player and enter the information supplied after activation.",
   },
   {
-    question: "Is B1G Player available on Firestick?",
-    answer:
-      "Compatible Firestick and Fire TV devices can use the supported B1G Player installation method. Always check your exact Fire OS device before installation.",
+    question: "Is there a free trial?",
+    answer: "A trial may be requested before purchasing. Availability may depend on current demand and support capacity.",
   },
   {
-    question: "What do people mean by “b1gplayer”?",
-    answer:
-      "“b1gplayer” is simply another way users may type B1G Player when searching for the app or service online.",
+    question: "Does the service support 4K?",
+    answer: "Selected streams may be available in 4K where supported. Actual quality depends on the source, device and connection.",
   },
   {
-    question: "Is “big player” the same as B1G Player?",
-    answer:
-      "Some users may type “big player” when searching for B1G Player. For the correct app and installation information, use the B1G Player name and check your device compatibility.",
+    question: "How quickly is the subscription activated?",
+    answer: "Most accounts are activated after the order has been confirmed and the required customer information has been received.",
   },
   {
-    question: "What is B1GTV?",
-    answer:
-      "“B1GTV” or “B1G TV” can be used as a search variation for people looking for B1G television services or B1G Player information. The specific product should always be confirmed before installation or purchase.",
+    question: "Where can I get setup help?",
+    answer: "Visit the Installation Guide or contact the support team.",
   },
   {
-    question: "How much does a B1G IPTV Subscription cost?",
-    answer:
-      "Plans currently start at £10 for one month. Three months cost £20, six months cost £30, and twelve months plus one free month cost £45.",
-  },
-  {
-    question: "Does every source play in 4K?",
-    answer:
-      "No. Picture quality varies by source, device, display, player, and connection.",
-  },
-  {
-    question: "Can I use the account on two televisions?",
-    answer:
-      "A standard account permits one active stream. Request a multi-connection option if two screens must play simultaneously.",
-  },
-  {
-    question: "Is the third-party player fee included?",
-    answer:
-      "Not automatically. Some Smart TV and mobile applications charge their own fee.",
-  },
-  {
-    question: "How quickly is the account activated?",
-    answer:
-      "Activation begins after the order and payment have been checked.",
-  },
-  {
-    question: "Does the plan renew automatically?",
-    answer:
-      "It should expire at the end of its term unless recurring renewal is clearly offered and accepted.",
+    question: "Can businesses resell B1G IPTV?",
+    answer: "Yes. Eligible businesses can apply through the reseller page.",
   },
 ];
 
@@ -94,6 +59,7 @@ export function B1GFAQ() {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  // Split FAQs into two columns for desktop layout
   const midIndex = Math.ceil(faqList.length / 2);
   const leftColFaqs = faqList.slice(0, midIndex);
   const rightColFaqs = faqList.slice(midIndex);
@@ -127,9 +93,10 @@ export function B1GFAQ() {
           </span>
         </button>
 
+        {/* Answer Expandable Area */}
         <div
           className={`transition-all duration-300 ease-in-out overflow-hidden ${
-            isOpen ? "max-h-[320px] opacity-100" : "max-h-0 opacity-0"
+            isOpen ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0"
           }`}
         >
           <div className="px-5 pb-5 pt-0 border-t border-slate-100/50 mt-1">
@@ -149,6 +116,7 @@ export function B1GFAQ() {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full">
         
+        {/* ── Section Heading & Intro ── */}
         <FadeIn className="w-full max-w-4xl mb-12">
           <div className="flex items-center gap-2.5 mb-3">
             <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-red-50 text-[#E01E26] shrink-0">
@@ -163,14 +131,20 @@ export function B1GFAQ() {
           </h2>
         </FadeIn>
 
+        {/* ── Accordion List Layout: 2 Columns on Large Screens ── */}
         <FadeIn className="w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start w-full">
+            
+            {/* Left Column FAQs */}
             <div className="flex flex-col gap-4 w-full">
               {leftColFaqs.map((faq, idx) => renderFaqItem(faq, idx))}
             </div>
+
+            {/* Right Column FAQs */}
             <div className="flex flex-col gap-4 w-full">
               {rightColFaqs.map((faq, idx) => renderFaqItem(faq, idx + midIndex))}
             </div>
+
           </div>
         </FadeIn>
 

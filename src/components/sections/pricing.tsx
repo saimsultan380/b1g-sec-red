@@ -23,7 +23,7 @@ const pricingPlans: PricingPlan[] = [
     id: "1-month",
     name: "1 Month",
     price: "£10",
-    period: "",
+    period: "/mo",
     description: "A flexible option for customers who prefer monthly access.",
     ctaText: "Choose 1 Month",
     features: [
@@ -44,7 +44,7 @@ const pricingPlans: PricingPlan[] = [
     id: "3-months",
     name: "3 Month",
     price: "£20",
-    period: "",
+    period: "/mo",
     description: "Suitable for customers who prefer a shorter commitment.",
     ctaText: "Choose 3 Months",
     features: [
@@ -65,7 +65,7 @@ const pricingPlans: PricingPlan[] = [
     id: "6-months",
     name: "6 Month",
     price: "£30",
-    period: "",
+    period: "/mo",
     description: "A mid-length option for viewers who want a balance between flexibility and value.",
     ctaText: "Choose 6 Months",
     features: [
@@ -86,7 +86,7 @@ const pricingPlans: PricingPlan[] = [
     id: "12-months",
     name: "12 Month",
     price: "£45",
-    period: "",
+    period: "/mo",
     description: "A longer-term option for regular viewers. Includes 1 month free.",
     ctaText: "Choose 12 Months + 1 Month Free",
     recommended: true,
@@ -145,12 +145,15 @@ export function B1GPricing() {
         {/* ── Section Heading & Intro ── */}
         <FadeIn className="w-full max-w-4xl mb-12">
           <h2 className="text-h2 font-bold tracking-tight text-[#12141F]">
-            Choose Your{" "}
-            <span className="text-brand-gradient font-bold">B1G IPTV Subscription</span>
+            Official B1G IPTV{" "}
+            <span className="text-brand-gradient font-bold">Subscription Plans</span>
           </h2>
           <div className="mt-4 space-y-3 text-sm sm:text-base text-[#4A4A4A] leading-relaxed">
             <p>
-              Select the B1G Player Subscription UK from our plans. Every standard plan includes one active connection, private login details, the same core catalogue, and setup guidance. The main difference is the subscription duration and effective monthly cost.
+              Choose a plan based on how long you want access and the option that best suits your budget.
+            </p>
+            <p>
+              Every current plan includes access to the B1G Player app on supported devices, secure login information and customer assistance.
             </p>
           </div>
         </FadeIn>
@@ -206,11 +209,9 @@ export function B1GPricing() {
                     >
                       {plan.price}
                     </span>
-                    {plan.period ? (
-                      <span className="font-heading text-[10px] sm:text-[11px] font-semibold text-slate-400 ml-1.5">
-                        {plan.period}
-                      </span>
-                    ) : null}
+                    <span className="font-heading text-[10px] sm:text-[11px] font-semibold text-slate-400 ml-1.5">
+                      {plan.period}
+                    </span>
                   </div>
 
                   {/* Features List */}
@@ -252,7 +253,7 @@ export function B1GPricing() {
         <FadeIn className="w-full">
           <div className="w-full rounded-[12px] border border-slate-200 bg-white p-5 sm:p-7 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             <p className="text-xs sm:text-sm text-[#4A4A4A] leading-relaxed max-w-2xl">
-              All prices displayed above are total package prices, not recurring monthly charges. Every B1G IPTV Subscription includes the same catalogue, app access, and core service features. Only the subscription duration and total price change.
+              Full plan details, connection rules and current availability should be reviewed before placing an order.
             </p>
 
             <Link href="/b1g-iptv-subscription/#compare-plans" className="shrink-0 w-full md:w-auto">
@@ -261,7 +262,7 @@ export function B1GPricing() {
                 size="lg"
                 className="w-full md:w-auto rounded-[12px] border-2 border-[#E01E26] bg-white text-[#12141F] px-5 sm:px-6 py-3.5 text-xs sm:text-sm font-semibold hover:bg-red-50"
               >
-                <span>Compare All B1G IPTV Subscription Plans</span>
+                <span>Compare all B1G IPTV subscription plans</span>
                 <ArrowRight className="ml-2 h-4 w-4 stroke-[2.5]" />
               </Button>
             </Link>
