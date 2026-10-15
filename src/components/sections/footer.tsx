@@ -59,6 +59,14 @@ export function B1GFooter() {
                   Supported Devices
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/blog/"
+                  className="text-xs sm:text-sm text-slate-500 hover:text-[#E01E26] font-semibold transition-colors"
+                >
+                  Blog
+                </Link>
+              </li>
             </ul>
           </div>
 

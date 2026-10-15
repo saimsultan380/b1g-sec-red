@@ -17,6 +17,7 @@ export const ROUTES = {
   subscription: "/b1g-iptv-subscription/",
   installation: "/b1g-player-installation-guide/",
   reseller: "/b1g-player-reseller/",
+  blog: "/blog/",
   contact: "/contact/",
 } as const;
 
@@ -235,6 +236,18 @@ export const SITE_PAGES = [
     breadcrumbs: [
       { name: "Home", path: ROUTES.home },
       { name: "Reseller Panel", path: ROUTES.reseller },
+    ],
+  },
+  {
+    path: ROUTES.blog,
+    title: "B1G Player Blog – IPTV Guides, Setup Tips & Updates",
+    description:
+      "Read B1G Player guides, installation tips, subscription advice and service updates for Firestick, Android and UK IPTV viewers.",
+    changeFrequency: "weekly" as const,
+    priority: 0.7,
+    breadcrumbs: [
+      { name: "Home", path: ROUTES.home },
+      { name: "Blog", path: ROUTES.blog },
     ],
   },
   {

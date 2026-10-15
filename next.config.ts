@@ -48,6 +48,18 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
 
+      // Old blog post URLs (/blog/slug/) → root post URLs (/slug/)
+      {
+        source: "/blog/:slug",
+        destination: "/:slug/",
+        permanent: true,
+      },
+      {
+        source: "/blog/:slug/",
+        destination: "/:slug/",
+        permanent: true,
+      },
+
       // Legacy / broken paths → canonical pages
       {
         source: "/setup-instructions",

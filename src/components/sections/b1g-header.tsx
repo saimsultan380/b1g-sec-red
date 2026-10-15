@@ -13,6 +13,7 @@ const navLinks = [
   { name: "Installation Guide", href: "/b1g-player-installation-guide/" },
   { name: "Subscription Plans", href: "/b1g-iptv-subscription/" },
   { name: "Reseller Panel", href: "/b1g-player-reseller/" },
+  { name: "Blog", href: "/blog/" },
   { name: "Contact Us", href: "/contact/" },
 ];
 
